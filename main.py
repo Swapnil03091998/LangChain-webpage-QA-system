@@ -29,7 +29,7 @@ def load_page_data(webpage_link):
 
 def process_page_content(page_data):
     # Process the web page content
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=10)
     all_splits = text_splitter.split_documents(page_data)
     return all_splits
 
